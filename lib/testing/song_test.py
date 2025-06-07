@@ -1,52 +1,51 @@
 #!/usr/bin/env python3
 
-from song import Song
+import unittest
+from lib.song import Song
 
-Song.count = 0
-Song.genre_count = {}
-Song.artist_count = {}
+class TestSong(unittest.TestCase):
+    def setUp(self):
+        Song.count = 0
+        Song.genres = []
+        Song.artists = []
+        Song.genre_count = {}
+        Song.artists_count = {}
 
-class TestSong:
-    '''Class "Song" in song.py'''
-
-    Song("99 Problems", "Jay Z", "Rap")
-    Song("Halo", "Beyonce", "Pop")
-    Song("Smells Like Teen Spirit", "Nirvana", "Rock")
+        Song("99 Problems", "Jay Z", "Rap")
+        Song("Halo", "Beyonce", "Pop")
+        Song("Smells Like Teen Spirit", "Nirvana", "Rock")
+        Song("Out of Touch", "Hall and Oates", "Pop")
+        Song("Sara Smile", "Hall and Oates", "Pop")
 
     def test_saves_name_artist_genre(self):
-        '''instantiates with a name, artist, and genre.'''
-        out_of_touch = Song("Out of Touch", "Hall and Oates", "Pop")
-        assert(out_of_touch.name == "Out of Touch")
-        assert(out_of_touch.artist == "Hall and Oates")
-        assert(out_of_touch.genre == "Pop")
+        song = Song("Test Track", "Test Artist", "Test Genre")
+        self.assertEqual(song.name, "Test Track")
+        self.assertEqual(song.artist, "Test Artist")
+        self.assertEqual(song.genre, "Test Genre")
 
     def test_has_song_count(self):
-        '''counts the total number of Song objects.'''
-        assert(Song.count == 4)
-        Song("Sara Smile", "Hall and Oates", "Pop")
-        assert(Song.count == 5)
+        self.assertEqual(Song.count, 5)
 
     def test_has_genres(self):
-        '''keeps track of all Song genres.'''
-        assert("Rap" in Song.genres)
-        assert("Pop" in Song.genres)
-        assert("Rock" in Song.genres)
+        self.assertIn("Rap", Song.genres)
+        self.assertIn("Pop", Song.genres)
+        self.assertIn("Rock", Song.genres)
 
     def test_has_artists(self):
-        '''keeps track of all Song artists.'''
-        assert("Jay Z" in Song.artists)
-        assert("Beyonce" in Song.artists)
-        assert("Hall and Oates" in Song.artists)
-        
+        self.assertIn("Jay Z", Song.artists)
+        self.assertIn("Beyonce", Song.artists)
+        self.assertIn("Hall and Oates", Song.artists)
+
     def test_has_genre_count(self):
-        '''keeps count of Songs for each genre.'''
-        assert(Song.genre_count["Rap"] == 1)
-        assert(Song.genre_count["Pop"] == 3)
-        assert(Song.genre_count["Rock"] == 1)
+        self.assertEqual(Song.genre_count["Rap"], 1)
+        self.assertEqual(Song.genre_count["Pop"], 3)
+        self.assertEqual(Song.genre_count["Rock"], 1)
 
     def test_has_artist_count(self):
-        '''keeps count of Songs for each artist.'''
-        assert(Song.artist_count["Jay Z"] == 1)
-        assert(Song.artist_count["Beyonce"] == 1)
-        assert(Song.artist_count["Nirvana"] == 1)
-        assert(Song.artist_count["Hall and Oates"] == 2)
+        self.assertEqual(Song.artists_count["Jay Z"], 1)
+        self.assertEqual(Song.artists_count["Beyonce"], 1)
+        self.assertEqual(Song.artists_count["Nirvana"], 1)
+        self.assertEqual(Song.artists_count["Hall and Oates"], 2)
+
+if __name__ == "__main__":
+    unittest.main()
