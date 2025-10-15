@@ -1,4 +1,32 @@
-# Lab: Inheritance, Class Attributes, and Class Methods- Music Library System
+# Lab: Inheritance, Class Attributes, and Class Methods - Music Library System
+
+## Overview
+This project implements a Python `Song` class that models a digital music library system.  
+Each song object stores its name, artist, and genre, while the class itself keeps track of:  
+
+* The total number of songs created  
+* All unique artists and genres  
+* The number of songs in each genre  
+* The number of songs for each artist  
+
+This lab demonstrates the use of **class attributes** and **class methods** to manage shared data across all instances.  
+All unit tests were successfully passed using `pytest`.
+
+### Example Output
+
+```python
+from lib.song import Song
+
+s1 = Song("Halo", "Beyonce", "Pop")
+s2 = Song("Formation", "Beyonce", "Pop")
+s3 = Song("Bad Guy", "Billie Eilish", "Alternative")
+
+print(Song.count)          # 3
+print(Song.genres)         # ['Pop', 'Alternative']
+print(Song.artists)        # ['Beyonce', 'Billie Eilish']
+print(Song.genre_count)    # {'Pop': 2, 'Alternative': 1}
+print(Song.artist_count)   # {'Beyonce': 2, 'Billie Eilish': 1}
+
 
 Now that you’ve delved into creating class attributes and methods it is time to put these concepts to the test. In this lab our focus will be on a song class that will include several class attributes and methods.
 
