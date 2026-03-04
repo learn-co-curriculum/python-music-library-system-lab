@@ -15,3 +15,7 @@ def __init__(self, name, artist, genre):
     Song.add_to_artist(artist)
     Song.add_to_genre_count(genre)
     Song.add_to_artist_count(artist)
+    
+    @classmethod
+    def add_song_to_count(cls):
+        cls.count += 1
