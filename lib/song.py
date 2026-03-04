@@ -19,3 +19,13 @@ def __init__(self, name, artist, genre):
     @classmethod
     def add_song_to_count(cls):
         cls.count += 1
+        
+    @classmethod
+    def add_to_genre(cls, genre):
+        if genre not in cls.genres:
+            cls.genres.append(genre)
+            
+    @classmethod
+    def add_to_artist(cls, artist):
+        if artist not in cls.artists:
+            cls.artists.append(artist)
