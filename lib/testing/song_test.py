@@ -9,7 +9,7 @@ Song.artist_count = {}
 class TestSong:
     '''Class "Song" in song.py'''
 
-    Song("99 Problems", "Jay Z", "Rap")
+    Song("99 Problems", "Jay-Z", "Rap")
     Song("Halo", "Beyonce", "Pop")
     Song("Smells Like Teen Spirit", "Nirvana", "Rock")
 
@@ -34,7 +34,7 @@ class TestSong:
 
     def test_has_artists(self):
         '''keeps track of all Song artists.'''
-        assert("Jay Z" in Song.artists)
+        assert("Jay-Z" in Song.artists)
         assert("Beyonce" in Song.artists)
         assert("Hall and Oates" in Song.artists)
         
@@ -46,7 +46,7 @@ class TestSong:
 
     def test_has_artist_count(self):
         '''keeps count of Songs for each artist.'''
-        assert(Song.artist_count["Jay Z"] == 1)
+        assert(Song.artist_count["Jay-Z"] == 1)
         assert(Song.artist_count["Beyonce"] == 1)
         assert(Song.artist_count["Nirvana"] == 1)
         assert(Song.artist_count["Hall and Oates"] == 2)
