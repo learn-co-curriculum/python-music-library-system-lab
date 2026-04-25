@@ -1,2 +1,6 @@
 .venv/*
 .pytest_cache/*
+.DS_Store
+__pycache__/
+package-lock.json
+.python-version
