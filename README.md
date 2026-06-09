@@ -1,3 +1,40 @@
+## Overview
+
+project implemente a `song class` for music innovation.
+CLass models individual songs while maintaining insight about the music library
+
+## Features
+
+-Track total songs created(`count`)
+-Maintain unique stes of all artists and genres.
+-Count songs per genre.
+Count song per artists.
+Automatic Updates.
+
+## Class Design
+
+## Attributes
+-`name` -song title.
+-`artists` -Artist name.
+-`genre` -Song genre.
+
+### Class Attributes
+- `count` – Total number of songs  
+- `genres` – Set of unique genres  
+- `artists` – Set of unique artists  
+- `genre_count` – Dictionary of genre → count  
+- `artists_count` – Dictionary of artist → count  
+
+### Class Methods
+- `add_song_to_count()` – Increments total song count  
+- `add_to_genres(genre)` – Adds new genre to `genres`  
+- `add_to_artists(artist)` – Adds new artist to `artists`  
+- `add_to_genre_count(genre)` – Updates genre count dictionary  
+- `add_to_artists_count(artist)` – Updates artist count dictionary  
+- `show_library_info()` – Displays global insights  
+
+
+
 # Lab: Inheritance, Class Attributes, and Class Methods- Music Library System
 
 Now that you’ve delved into creating class attributes and methods it is time to put these concepts to the test. In this lab our focus will be on a song class that will include several class attributes and methods.
@@ -144,3 +181,4 @@ Before you submit your solution, you need to save your progress with git.
   * For additional information on submitting assignments in CodeGrade: [Getting Started in Canvas](https://help.codegrade.com/for-students/getting-started/getting-started-in-canvas)
 
 
+![Results](assets/Results.png)
