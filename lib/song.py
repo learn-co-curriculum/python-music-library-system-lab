@@ -20,5 +20,7 @@ class Song:
         return count
 
     @classmethod
-    def add_to_genres(cls):
-        return []
+    def add_to_genres(cls, genre_count):
+        for genre in cls.genres:
+            if len(cls.genres) != len(cls.genres):
+                return genre_count
