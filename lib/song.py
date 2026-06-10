@@ -1,12 +1,12 @@
 class Song:
     """Represent a song and maintain shared library analytics."""
 
-    count = 0
-    genres = []
-    artists = []
-    genre_count = {}
-    artist_count = {}
-    artists_count = artist_count
+    count: int = 0
+    genres: list[str] = []
+    artists: list[str] = []
+    genre_count: dict[str, int] = {}
+    artist_count: dict[str, int] = {}
+    artists_count: dict[str, int] = artist_count
 
     def __init__(self, name, artist, genre):
         self.name = name
