@@ -1,0 +1,23 @@
+{
+  "name": "python-music-library-system-lab",
+  "version": "1.0.0",
+  "description": "Now that you’ve delved into creating class attributes and methods it is time to put these concepts to the test. In this lab our focus will be on a song class that will include several class attributes and methods.",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Kip-sum/python-music-library-system-lab.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Kip-sum/python-music-library-system-lab/issues"
+  },
+  "homepage": "https://github.com/Kip-sum/python-music-library-system-lab#readme"
+}
