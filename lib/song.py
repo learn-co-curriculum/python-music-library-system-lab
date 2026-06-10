@@ -41,3 +41,8 @@ class Song:
     def add_to_genre_count(cls, genre, genre_count):
         genre_count += 1
         return [f"{genre}: {genre_count}"]
+    
+    @classmethod
+    def add_to_artists_count(cls, artist, artists_count):
+        artists_count += 1
+        return [f"{artist}: {artists_count}"]
