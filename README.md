@@ -8,14 +8,45 @@ Imagine you've just landed a role as a junior software engineer at MusicTech Inn
 <br />
 You're tasked with creating a Song class that not only represents individual songs with attributes like name, artist, and genre but also maintains global insights. For example, your class will keep track of the total number of songs, list all unique artists and genres, and even count how many songs belong to each genre and artist. This functionality is critical for features like personalized recommendations and data analytics.
 
+## Project Overview
+
+This project implements a `Song` class that tracks both individual song details and global library analytics.
+
+Key functionality:
+* Create songs with `name`, `artist`, and `genre`
+* Track total songs created using `Song.count`
+* Collect unique genres in `Song.genres`
+* Collect unique artists in `Song.artists`
+* Count songs per genre in `Song.genre_count`
+* Count songs per artist in `Song.artist_count` / `Song.artists_count`
+
+![Song Class Screenshot](./screenshot-song-class.png)
+
 ## Tools & Resources
 
 * [GitHub Repo](https://github.com/learn-co-curriculum/python-music-library-system-lab)
 * [Python Documentation](https://docs.python.org/3/)
-* [Classes - Python](https://docs.python.org/3/)
+* [Classes - Python](https://docs.python.org/3/tutorial/classes.html)
 * [Python Class Attributes: An Overly Thorough Guide - Toptal](https://www.toptal.com/python/python-class-attributes-an-overly-thorough-guide)
 * [Python's Instance, Class, and Static Methods Demystified - Real Python](https://realpython.com/instance-class-and-static-methods-demystified/)
 * [The Factory Method Pattern and Its Implementation in Python - Real Python](https://realpython.com/factory-method-python/)
+
+### Local Setup
+
+To run the project locally:
+1. Create a Python virtual environment:
+   ```bash
+   python3 -m venv .venv
+   source .venv/bin/activate
+   ```
+2. Install dependencies if needed:
+   ```bash
+   python -m pip install pytest
+   ```
+3. Run the tests:
+   ```bash
+   python -m pytest -q
+   ```
 
 ## Instructions
 
@@ -28,8 +59,7 @@ Before we begin coding, let's complete the initial setup for this lesson:
   * Clone the forked repository to your local machine.
 * Open and Run File
   * Open the project in VSCode.
-  * Run npm install to install all necessary dependencies.
-
+* Create and activate a Python virtual environment, then install dependencies if needed.
 ### Task 1: Define the Problem
 
 Build a song class. As a user, one should be able to:
