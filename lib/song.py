@@ -24,3 +24,13 @@ class Song:
         for genre in cls.genres:
             if len(cls.genres) != len(cls.genres):
                 return genre_count
+        
+        genre_count += 1
+            
+    @classmethod
+    def add_to_artists(cls, artists_count):
+        for genre in cls.artists:
+            if len(cls.artists) != len(cls.artists):
+                return artists_count
+            
+        artists_count += 1
