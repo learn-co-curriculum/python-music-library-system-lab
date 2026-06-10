@@ -4,11 +4,10 @@ artist = input("Enter the artist: ")
 
 class Song:
     count = 0
-    all_songs = {}
     genres = []
     artists = []
-    genre_count = 0
-    artists_count = 0
+    genre_count = {}
+    artists_count = {}
 
     def __init__(self, name, artist, genre):
         self.name = name
@@ -18,8 +17,7 @@ class Song:
 
     @classmethod
     def add_song_to_count(cls):
-        Song.count += 1
-        return Song.count
+        cls.count += 1
 
     @classmethod
     def add_to_genres(cls, genres):
