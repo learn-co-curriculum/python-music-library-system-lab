@@ -1,11 +1,25 @@
+name = input("Enter the song title: ")
+genre = input("Enter the song genre: ")
+artist = input("Enter the artist: ")
+
 class Song:
     count = 0
     genres = []
     artists = []
     genre_count = 0
     artists_count = 0
-    
+
     def __init__(self, name, artist, genre):
         self.name = name
         self.artist = artist
         self.genre = genre
+
+    @classmethod
+    def add_song_to_count(cls):
+        return [
+            
+        ]
+
+    @classmethod
+    def add_to_genres(cls):
+        return []
