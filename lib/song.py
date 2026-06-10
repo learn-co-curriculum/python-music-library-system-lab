@@ -1,7 +1,3 @@
-name = input("Enter the song title: ")
-genre = input("Enter the song genre: ")
-artist = input("Enter the artist: ")
-
 class Song:
     count = 0
     genres = []
@@ -13,7 +9,12 @@ class Song:
         self.name = name
         self.artist = artist
         self.genre = genre
-        Song.all_songs.append(self)
+
+        self.__class__.add_song_to_count()
+        self.__class__.add_to_genres(genre)
+        self.__class__.add_to_artists(artist)
+        self.__class__.add_to_genre_count(genre)
+        self.__class__.add_to_artists_count(artist)
 
     @classmethod
     def add_song_to_count(cls):
@@ -30,11 +31,25 @@ class Song:
             cls.artists.append(artist)
 
     @classmethod
-    def add_to_genre_count(cls, genre, genre_count):
-        genre_count += 1
-        return [f"{genre}: {genre_count}"]
-    
+    def add_to_genre_count(cls, genre):
+        if genre in cls.genre_count:
+            cls.genre_count[genre] += 1
+        else:
+            cls.genre_count[genre] = 1
+
     @classmethod
-    def add_to_artists_count(cls, artist, artists_count):
-        artists_count += 1
-        return [f"{artist}: {artists_count}"]
+    def add_to_artists_count(cls, artist):
+        if artist in cls.artists_count:
+            cls.artists_count[artist] += 1
+        else:
+            cls.artists_count[artist] = 1
+
+song1 = Song("Halo", "Beyonce", "Pop")
+song2 = Song("Empire State of Mind", "Jay-Z", "Rap")
+song3 = Song("Crazy in Love", "Beyonce", "Pop")
+
+print(Song.count)
+print(Song.genres)
+print(Song.artists)
+print(Song.genre_count)
+print(Song.artists_count)
