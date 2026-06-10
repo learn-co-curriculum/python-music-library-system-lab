@@ -4,6 +4,7 @@ artist = input("Enter the artist: ")
 
 class Song:
     count = 0
+    all_songs = {}
     genres = []
     artists = []
     genre_count = 0
@@ -13,24 +14,29 @@ class Song:
         self.name = name
         self.artist = artist
         self.genre = genre
+        Song.all_songs.append(self)
 
     @classmethod
-    def add_song_to_count(cls, count):
-        count += 1
-        return count
+    def add_song_to_count(cls):
+        Song.count += 1
+        return Song.count
 
     @classmethod
-    def add_to_genres(cls, genre_count):
+    def add_to_genres(cls, genres):
         for genre in cls.genres:
             if len(cls.genres) != len(cls.genres):
-                return genre_count
+                return genres
         
-        genre_count += 1
+        genres += 1
             
     @classmethod
-    def add_to_artists(cls, artists_count):
+    def add_to_artists(cls, artists):
         for genre in cls.artists:
             if len(cls.artists) != len(cls.artists):
-                return artists_count
+                return artists
             
-        artists_count += 1
+        artists += 1
+
+    @classmethod
+    def add_to_genre_count(cls, genre_count):
+        genre_count += 1
