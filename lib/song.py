@@ -41,7 +41,7 @@ class Song:
     def add_to_genre_count(cls, genre):
         cls.genre_count[genre] = cls.genre_count.get(genre, 0) + 1
 
-    @classmethod
+    @cshowlassmethod
     def add_to_artists_count(cls, artist):
         if cls.artists_count is not cls.artist_count:
             if not cls.artist_count:
@@ -51,3 +51,15 @@ class Song:
 
         cls.artist_count[artist] = cls.artist_count.get(artist, 0) + 1
         cls.artists_count = cls.artist_count
+
+
+if __name__ == "__main__":
+    Song("Halo", "Beyonce", "Pop")
+    Song("Formation", "Beyonce", "Pop")
+    Song("99 Problems", "Jay-Z", "Rap")
+
+    print(Song.count)
+    print(Song.genres)
+    print(Song.artists)
+    print(Song.genre_count)
+    print(Song.artist_count)
