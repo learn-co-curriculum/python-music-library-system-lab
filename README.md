@@ -143,4 +143,20 @@ Before you submit your solution, you need to save your progress with git.
   * Click on + Create Submission. Connect your repository for this lab.
   * For additional information on submitting assignments in CodeGrade: [Getting Started in Canvas](https://help.codegrade.com/for-students/getting-started/getting-started-in-canvas)
 
+## Song class (implementation notes)
+
+The `Song` class is implemented in `lib/song.py`. It represents a single song
+and automatically updates global statistics when a new instance is created:
+
+- `count`: total number of songs created
+- `genres`: list of unique genres
+- `artists`: list of unique artists
+- `genre_count`: mapping of genre -> number of songs
+- `artist_count`: mapping of artist -> number of songs
+
+A screenshot placeholder is included here; replace `screenshot.png` with an
+actual image showing your test output or stats when ready.
+
+![screenshot placeholder](screenshot.png)
+
 
