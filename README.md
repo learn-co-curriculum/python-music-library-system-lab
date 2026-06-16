@@ -134,6 +134,13 @@ Before you submit your solution, you need to save your progress with git.
 2. Create a commit by executing ```git commit -m "Your commit message"```
 3. Push your commits to GitHub by executing ```git push origin main``` or ```git push origin master```, depending on the name of your branch (use ```git branch``` to check on which branch you are).
 
+Implemented Song class
+----------------------
+
+The `lib/song.py` file contains a `Song` class that tracks created songs and provides class-level
+insights: total `count`, unique `genres`, unique `artists`, `genre_count` (per-genre totals), and
+`artist_count` (per-artist totals). Each new `Song` instance updates these trackers automatically.
+
 ## Submission and Grading Criteria
 
 1. Use the rubric in Canvas as a guide for how this lab is graded.
