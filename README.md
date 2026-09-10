@@ -127,6 +127,81 @@ Best Practice documentation steps:
 * Remove unnecessary/commented out code
 * If needed, update git ignore to remove sensitive data
 
+## Implementation
+
+The Song class in lib/song.py represents individual songs and maintains statistics across all songs created.
+
+## Song Attributes
+
+Each Song object contains:
+
+name — the name of the song
+artist — the artist who created the song
+genre — the genre of the song
+
+## Class Attributes
+
+The Song class maintains the following information:
+
+count — total number of Song objects created
+genres — list of unique song genres
+artists — list of unique artists
+genre_count — dictionary containing the number of songs in each genre
+artists_count — dictionary containing the number of songs associated with each artist
+
+The implementation also supports artist_count to maintain compatibility with the provided test suite.
+
+## Class Methods
+
+The class provides methods that automatically update the class-wide statistics whenever a new Song object is created:
+
+add_song_to_count() — increments the total song count
+add_to_genres() — adds new genres while preventing duplicates
+add_to_artists() — adds new artists while preventing duplicates
+add_to_genre_count() — tracks the number of songs for each genre
+add_to_artists_count() — tracks the number of songs for each artist
+## Testing
+
+The completed Song class was tested using the provided pytest test suite:
+
+```
+python3 -m pytest lib/testing/song_test.py
+```
+
+
+All 6 tests passed successfully.
+
+Example
+
+Creating three songs:
+
+Song("99 Problems", "Jay Z", "Rap")
+Song("Halo", "Beyonce", "Pop")
+Song("Smells Like Teen Spirit", "Nirvana", "Rock")
+
+
+produces class-wide information such as:
+
+Song.count
+#3
+
+Song.genres
+#['Rap', 'Pop', 'Rock']
+
+Song.artists
+#['Jay Z', 'Beyonce', 'Nirvana']
+
+Song.genre_count
+#{'Rap': 1, 'Pop': 1, 'Rock': 1}
+
+Song.artist_count
+#{'Jay Z': 1, 'Beyonce': 1, 'Nirvana': 1}
+
+### Completed Work
+
+![Song class tests passing](images/song-class-tests.png)
+
+
 ## Save your work and push to GitHub
 
 Before you submit your solution, you need to save your progress with git.
